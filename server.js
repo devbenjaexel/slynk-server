@@ -3,14 +3,6 @@
 const http = require('http');
 const fs = require('fs');
 const { WebSocketServer } = require('ws');
-{
-  "name": "slynk-server",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": { "start": "node server.js" },
-  "engines": { "node": ">=18" },
-  "dependencies": { "ws": "^8.18.0" }
-}
 
 const PORT = process.env.PORT || 8080;
 const FILE = process.env.SCORES_FILE || 'scores.json';
@@ -88,3 +80,11 @@ wss.on('connection', ws => {
 });
 
 server.listen(PORT, () => console.log('Servidor de Slynk.io en el puerto ' + PORT));
+{
+  "name": "slynk-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}
